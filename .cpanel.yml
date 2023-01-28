@@ -3,5 +3,5 @@ deployment:
 
    tasks:
 
-      - export DEPLOYPATH= “/home/dahouz1/english.4kids.uz”
+      - export DEPLOYPATH=/home/dahouz1/english.4kids.uz
       - /bin/cp -R * $DEPLOYPATH
