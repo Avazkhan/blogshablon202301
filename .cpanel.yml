@@ -1,0 +1,7 @@
+---
+deployment:
+
+   tasks:
+
+      - export DEPLOYPATH=(здесь путь директории) /home/dahouz1/english.4kids.uz/
+      - /bin/cp -R * $DEPLOYPATH
