@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bosh sahifa</title>
-</head>
-<body>
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Yangiliklar</h1>
-    <ul>
-        {% for post in object_list %}
-            <li> <h2>{{ post.title }}</h2></br> {{ post.text }}</li></br>
+    {% for post in object_list %}
+        <div class="post-entry">
+            <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.content | slice:":100" }}</p>
+        </div>
 
-        {% endfor %}
-    </ul>
+    {% endfor %}
 {% endblock content %}
-</body>
-</html>
